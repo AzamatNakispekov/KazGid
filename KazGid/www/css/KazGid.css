@@ -1,0 +1,15 @@
+.contene{
+    height:auto;
+    width: 350;
+    position: absolute;
+    left: 550px;
+}
+.button{
+ position: relative;
+top: 25px;}
+
+.table{
+    position: relative;
+    top: 25px;}
+td{
+font: 6px arial;}
