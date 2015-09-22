@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.hello" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+      <icon src="/img/meteo.png" width="57" height="57"  density="mdpi" />
     <name>Hydropoints-collector</name>
     <description>
         Apache Cordova application for project from Kazgidromet.
@@ -7,7 +8,7 @@
     <author email="azik_nakispekov@mail.ru" >
         Apache Cordova Team
     </author>
-     <icon src="C:\Users\Azamat\KazGid\KazGid\www\img\meteo.png" width="57" height="57"  density="mdpi" />
+     <icon src="/img/meteo.png" width="57" height="57"  density="mdpi" />
     <content src="index.html" />
     <access origin="*" />
 </widget>

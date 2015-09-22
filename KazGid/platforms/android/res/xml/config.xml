@@ -8,7 +8,7 @@
     <author email="azik_nakispekov@mail.ru">
         Apache Cordova Team
     </author>
-    <icon density="mdpi" height="57" src="C:\Users\Azamat\KazGid\KazGid\www\img\meteo.png" width="57" />
+    <icon density="mdpi" height="57" src="/img/meteo.png" width="57" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
