@@ -85,15 +85,15 @@ console.log('decode 10221 20022 30223 47615');
 
 function decodeSection1(data) {
     
-    var group1  = decodeGroup11(data)
+    var group1 = decodeGroup11(data[0])
   
-    var group2 = decodeGroup12(data)
+    var group2 = decodeGroup12(data[1])
  
-    var group3 = decodeGroup13(data)
+    var group3 = decodeGroup13(data[2])
   
-    var group4 = decodeGroup14(data)
+    var group4 = decodeGroup14(data[3])
  
-    var group5 = decodeGroup15(data)
+    var group5 = decodeGroup15(data[4])
  
     return {
     IdForH8: group1.IdForH8,
@@ -115,5 +115,5 @@ function decodeSection1(data) {
     TheStateOfThePond: group5.TheStateOfThePond,
 }
  }
-console.log(decodeSection1('10221', '20022', '30223', '47615','60000'));
+console.log(decodeSection1(['10221', '20022', '30223', '47615','60000']));
 
