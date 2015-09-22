@@ -59,7 +59,7 @@ function decodeGroup14(data){
     }
 }
 
-function decodeGroup15 (data){
+function decodeGroup16 (data){
     return{
     TheStateOfThePondId:data.substring(0,1),
     TheStateOfThePond:data.substring(1,5),
@@ -78,7 +78,7 @@ console.log(decodeGroup13('30223'));
 
 console.log(decodeGroup14('47615'));
 
-console.log(decodeGroup15('60000'));
+console.log(decodeGroup16('60000'));
 
 
 console.log('decode 10221 20022 30223 47615');
@@ -93,7 +93,7 @@ function decodeSection1(data) {
   
     var group4 = decodeGroup14(data[3])
  
-    var group5 = decodeGroup15(data[4])
+    var group5 = decodeGroup16(data[4])
  
     return {
     IdForH8: group1.IdForH8,
