@@ -85,16 +85,20 @@ console.log('decode 10221 20022 30223 47615');
 
 function decodeSection1(data) {
     
-    var group1 = decodeGroup11(data[0])
-  
-    var group2 = decodeGroup12(data[1])
- 
-    var group3 = decodeGroup13(data[2])
-  
-    var group4 = decodeGroup14(data[3])
- 
-    var group5 = decodeGroup16(data[4])
- 
+    var group1 = decodeGroup11(data[0]);
+    var group2 = decodeGroup12(data[1]);
+    var group3 = decodeGroup13(data[2]);
+    var group4 = decodeGroup14(data[3]);
+    
+    if(data.length>4)
+    {
+    var group6 = decodeGroup16(data[4]);
+    }
+    else
+    {
+    var group6 = {TheStateOfThePondId:'6',TheStateOfThePond:null}
+    }
+    
     return {
     IdForH8: group1.IdForH8,
     H8: group1.H8,
@@ -111,9 +115,11 @@ function decodeSection1(data) {
     TempOfWater: group4.TempOfWater,
     TempOfAir:group4.TempOfAir,
     
-    TheStateOfThePondId: group5.TheStateOfThePondId,
-    TheStateOfThePond: group5.TheStateOfThePond,
+    TheStateOfThePondId: group6.TheStateOfThePondId,
+    TheStateOfThePond: group6.TheStateOfThePond,
 }
  }
 console.log(decodeSection1(['10221', '20022', '30223', '47615','60000']));
+console.log(decodeSection1(['10369', '20102', '30368', '44003']));
+console.log(decodeSection1(['10221', '20022', '30223', '47615']));
 
