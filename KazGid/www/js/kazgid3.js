@@ -1,3 +1,25 @@
+function splitCode(data){
+    var mass=[];
+    var post=data.substring(0,5);
+    var data1=data.substring(5,10);
+    var LevelOfWaterAt8=data.substring(10,15);
+    var changes=data.substring(15,20);
+    var LevelOfWaterAt20=data.substring(20,25);
+    var temperatures=data.substring(25,30);
+   
+     if(data.length>30)
+    {
+     var intensity=data.substring(30,35);
+     return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures,intensity] ;
+    }
+     return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures];}
+
+console.log("Array length", splitCode('123456789012345678901234567890').length); 
+console.log("Array length", splitCode('12345678901234567890123456789000000').length);
+
+console.log(splitCode('12345678901234567890123456789000000'));
+console.log(splitCode('123456789012345678901234567890'));
+
 function decodeSection0(data) {
     if (data.length !== 2 && data.length !== 3) {
     throw new Error("Please pass array which consists from 2 or 3, 5 character code sequences.");
