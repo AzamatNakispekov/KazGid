@@ -7,16 +7,16 @@ function splitCode(data){
     var LevelOfWaterAt20=data.substring(20,25);
     var temperatures=data.substring(25,30);
    
-     if(data.length>30)
-    {
-     var intensity=data.substring(30,35);
-     return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures,intensity] ;
-    }
-     return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures];}
+     if(data.length>30){
+        var intensity=data.substring(30,35);
+        return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures,intensity] ;
+     }
+return mass=[post,data1,LevelOfWaterAt8,changes,LevelOfWaterAt20,temperatures];
+
+}
 
 console.log("Array length", splitCode('123456789012345678901234567890').length); 
 console.log("Array length", splitCode('12345678901234567890123456789000000').length);
-
 console.log(splitCode('12345678901234567890123456789000000'));
 console.log(splitCode('123456789012345678901234567890'));
 
