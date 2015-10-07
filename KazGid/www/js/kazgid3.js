@@ -22,7 +22,7 @@ console.log(splitCode('123456789012345678901234567890'));
 
 function decodeSection0(data) {
     if (data.length !== 2 && data.length !== 3) {
-    throw new Error("Please pass array which consists from 2 or 3, 5 character code sequences.");
+    //throw new Error("Please pass array which consists from 2 or 3, 5 character code sequences.");
     }
     
     if (data.length === 3) {
@@ -118,7 +118,7 @@ function decodeSection1(data) {
     }
     else
     {
-    var group6 = {TheStateOfThePondId:'6',TheStateOfThePond:null}
+    var group6 = {data:'Not found'}
     }
     
     return {
@@ -145,3 +145,36 @@ console.log(decodeSection1(['10221', '20022', '30223', '47615','60000']));
 console.log(decodeSection1(['10369', '20102', '30368', '44003']));
 console.log(decodeSection1(['10221', '20022', '30223', '47615']));
 
+
+ console.log("Function for decoding");
+function decode(data){
+    var CutKode=splitCode(data);
+    var newmass1=[CutKode[0],CutKode[1]];
+    var newmass2=[CutKode[2],CutKode[3],CutKode[4],CutKode[5]];
+    console.log(CutKode);
+    console.log(newmass1);
+    console.log(newmass2);
+    console.log("Здесь работает");
+    if(CutKode.lenght>4){
+    var newmass2=[CutKode[2],CutKode[3],CutKode[4],CutKode[5],CutKode[6]];}
+    var decodesec0=decodeSection0(newmass1);
+    var decodesec1=decodeSection1(newmass2);
+    console.log(decodesec0);
+    console.log(decodesec1);}
+
+
+console.log(decode('12332143465324575684576856796859675678576984568'))
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
